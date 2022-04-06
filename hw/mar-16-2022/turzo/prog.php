@@ -1,0 +1,5 @@
+<?php
+
+echo  "HELLO THIS IS ME YOUR FRIEND TURZO"
+
+?>
