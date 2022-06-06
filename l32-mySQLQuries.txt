@@ -1,0 +1,12 @@
+SELECT * FROM `students`
+SELECT * FROM `students` WHERE `id` = 1
+SELECT * FROM `students` WHERE `name` = "Amit Ghosh"
+SELECT * FROM `students` WHERE `name` = "Amit Ghosh" AND `city` = "Dhaka"
+INSERT INTO `students` (`name`, `city`, `gender`, `father`, `mother`) VALUES ("Sadik Saad", "Bogura", "Male", "Father of Sadik", "Mother of Sadik")
+INSERT INTO `students` (`name`, `city`, `gender`, `father`, `mother`) VALUES ("Kamal Mia", "Bogura", "Male", "Father of Kamal", "Mother of Kamal"), ("Jamal Mia", "Bogura", "Male", "Father of Jamal", "Mother of Jamal"), ("Tomal Mia", "Bogura", "Male", "Father of Tomal", "Mother of Tomal")
+UPDATE `students` SET `name` = "Amitav Bacchan" WHERE id = 3
+UPDATE `students` SET `name` = "Kamal Khan", `city` = "Kustia" WHERE id = 5
+DELETE FROM `students` WHERE `id` = 7 
+SELECT `students`.`name`, `results`.`grade` FROM `students` INNER JOIN `results` ON `students`.`id` = `results`.`student_id` WHERE `students`.`id` = 1
+SELECT * FROM `students` LIMIT 3, 5
+SELECT * FROM `students` WHERE `name` LIKE "%Amit%"
