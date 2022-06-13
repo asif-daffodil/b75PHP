@@ -20,8 +20,6 @@
     print_r($conn);
     echo "</pre>"; */
 
-    $selectQuery = "SELECT * FROM `students`";
-    $selectData = $conn->query($selectQuery);
 
     // $convertedData = $selectData->fetch_all();
     // $convertedData = $selectData->fetch_object();
@@ -43,6 +41,9 @@
 
 <div>
     <?php 
+    $selectQuery = "SELECT * FROM `students`";
+    $selectData = $conn->query($selectQuery);
+    
     while($obj = $selectData->fetch_object()){
         echo "Name :".$obj->name."<br />City :".$obj->city."<br />Gender :".$obj->gender."<br /><br />";
     }
